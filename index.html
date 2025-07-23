@@ -1,283 +1,184 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E4G & Sameer - Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E4G & Ali - Digital Duo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0f0f0f;
+      background-color: #111;
       color: #f5f5f5;
-      line-height: 1.6;
     }
-    header {
-      background: #1a1a1a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      color: #00ffd5;
-    }
-    nav a {
-      color: #f5f5f5;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00ffd5;
-    }
-    .section {
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: auto;
+    header, footer {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
     }
     .hero {
+      padding: 50px 20px;
       text-align: center;
-      padding-top: 5rem;
     }
     .hero h2 {
-      font-size: 2.2rem;
-      color: #00ffd5;
-      margin-bottom: 1rem;
+      font-size: 2rem;
     }
-    .hero p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-    .card-container {
+    .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
+      gap: 20px;
+      padding: 20px;
     }
     .card {
-      background: #1c1c1c;
-      padding: 2rem;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 255, 213, 0.2);
-    }
-    .card h3 {
-      color: #00ffd5;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      color: #ddd;
-    }
-    .footer {
-      background: #1a1a1a;
-      padding: 2rem;
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-    }
-    .counter-section, .tools-section {
+    .stats {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 4rem;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    .counter {
+      font-size: 2rem;
+      color: #0f0;
       text-align: center;
     }
-    .counter, .label {
-      font-size: 1.5rem;
-      color: #00ffd5;
+    .label {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5px;
     }
-    .tool-box {
-      background: #1c1c1c;
-      padding: 2rem;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-    .tool-box textarea, .tool-box input, .tool-box select {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      background: #111;
-      color: #00ffd5;
-      border: 1px solid #444;
-      border-radius: 8px;
-      resize: none;
-    }
-    .tool-box button {
-      background: #00ffd5;
-      color: #000;
-      padding: 0.7rem 1.5rem;
-      font-weight: bold;
+    button {
+      background: #333;
+      color: white;
+      padding: 10px 15px;
       border: none;
-      border-radius: 6px;
+      margin-top: 10px;
       cursor: pointer;
+      border-radius: 6px;
     }
-    .output {
-      margin-top: 1rem;
-      color: #ccc;
-      font-style: italic;
+    textarea, input {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background: #222;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>E4G & Sameer</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-    </nav>
-  </header>  <section class="section hero" id="about">
-    <h2>Meet E4G & Sameer</h2>
-    <p>Two brothers reshaping the digital world — E4G is a pro at social media, writing and digital marketing. Sameer masters editing, advertising and digital strategies that convert.</p>
-  </section>  <section class="section" id="skills">
-    <div class="card-container">
-      <div class="card">
-        <h3><i class="fas fa-user-edit"></i> Sameer - Digital Specialist</h3>
-        <p>
-          With deep expertise in editing, digital advertising and full-spectrum marketing — Sameer builds brand stories that scale and sell.
-        </p>
-      </div>
-      <div class="card">
-        <h3><i class="fas fa-share-alt"></i> E4G - Social Media & Writing Pro</h3>
-        <p>
-          A creative force in social media management, content writing and digital marketing. E4G crafts engaging strategies that build presence and conversions.
-        </p>
-      </div>
-    </div><div class="counter-section">
-  <div>
-    <div class="counter" id="projects">0</div>
-    <div class="label">Projects</div>
-  </div>
-  <div>
-    <div class="counter" id="clients">0</div>
-    <div class="label">Clients</div>
-  </div>
-  <div>
-    <div class="counter" id="revenue">₹0</div>
-    <div class="label">Client Revenue</div>
-  </div>
+    <h1>E4G & Ali</h1>
+  </header>  <section class="hero">
+    <h2>Meet E4G & Ali</h2>
+    <p>Two brothers reshaping the digital world — E4G is a pro at social media, writing and digital marketing. Ali masters editing, advertising and digital strategies that convert.</p>
+  </section>  <section class="container">
+    <div class="card">
+      <h3><i class="fas fa-user-edit"></i> Ali - Digital Specialist</h3>
+      <p>With deep expertise in editing, digital advertising and full-spectrum marketing — Ali builds brand stories that scale and sell.</p>
+    </div><div class="card">
+  <h3><i class="fas fa-user-tie"></i> E4G - E-commerce & Social Media</h3>
+  <p>E4G handles social media like a strategist and writes high-converting content. He also understands ecommerce operations deeply.</p>
 </div>
 
-<div class="tool-box">
-  <h3>💡 Viral Score Analyzer</h3>
-  <textarea id="viralText" placeholder="Paste your caption or idea..."></textarea>
-  <button onclick="analyzeViral()">Analyze</button>
-  <div class="output" id="viralOutput"></div>
-</div>
-
-<div class="tool-box">
+  </section>  <section class="stats">
+    <div>
+      <div class="counter" id="projects">0</div>
+      <div class="label">Projects Completed</div>
+    </div>
+    <div>
+      <div class="counter" id="clients">0</div>
+      <div class="label">Clients Served</div>
+    </div>
+    <div>
+      <div class="counter" id="revenue">₹0</div>
+      <div class="label">Client Revenue</div>
+    </div>
+  </section>  <section class="container">
+    <div class="card">
+      <h3>📣 Viral Score Analyzer</h3>
+      <textarea id="viralInput" rows="3" placeholder="Paste your caption or ad idea..."></textarea>
+      <button onclick="analyzeViral()">Analyze</button>
+      <p id="viralResult"></p>
+    </div><div class="card">
   <h3>📊 Ad Performance Simulator</h3>
-  <input id="budgetInput" type="number" placeholder="Enter budget ₹" />
-  <select id="platformInput">
-    <option>Instagram</option>
-    <option>Facebook</option>
-    <option>Google</option>
-  </select>
+  <input type="number" id="budgetInput" placeholder="Enter ad budget (₹)">
   <button onclick="simulateAd()">Simulate</button>
-  <div class="output" id="adOutput"></div>
+  <p id="adResult"></p>
 </div>
 
-<div class="tool-box">
-  <h3>📅 30-Day Content Calendar (Preview)</h3>
-  <input id="industryInput" placeholder="e.g. Fashion, Tech, Fitness..." />
+<div class="card">
+  <h3>📝 Insta Caption Generator</h3>
+  <input id="captionTopic" placeholder="Enter product/topic...">
+  <button onclick="generateCaption()">Generate</button>
+  <p id="captionOut"></p>
+</div>
+
+<div class="card">
+  <h3>🗓️ Content Calendar (30 Days)</h3>
+  <input id="calendarTopic" placeholder="Enter niche or product...">
   <button onclick="generateCalendar()">Generate Calendar</button>
-  <div class="output" id="calendarOutput"></div>
+  <ul id="calendarList"></ul>
 </div>
 
-<div class="tool-box">
-  <h3>🚀 Mini Landing Page Builder</h3>
-  <input id="ctaText" placeholder="Enter Call-to-Action" />
-  <input id="productText" placeholder="Enter Product Name" />
-  <button onclick="generateLanding()">Generate Preview</button>
-  <div class="output" id="landingOutput"></div>
-</div>
-
-<div class="tool-box">
-  <h3>📈 Client Success Timeline</h3>
-  <div class="output">
-    <ul>
-      <li>📦 Jan: Online store setup complete</li>
-      <li>📣 Feb: Ad campaigns launched</li>
-      <li>💰 Mar: ₹2L revenue achieved</li>
-      <li>📊 Apr: Expanded into new vertical</li>
-    </ul>
-  </div>
-</div>
-
-  </section>  <footer class="footer">&copy; 2025 E4G & Sameer. All rights reserved.</footer>  <script>
-    // Counter Logic
-    const animateCounter = (id, end, prefix = '', duration = 2000) => {
+  </section>  <footer class="footer">&copy; 2025 E4G & Ali. All rights reserved.</footer>  <script>
+    function animateCounter(id, end, prefix = '') {
+      let el = document.getElementById(id);
       let start = 0;
-      const increment = end / (duration / 10);
-      const el = document.getElementById(id);
-      const counter = setInterval(() => {
+      let duration = 1000;
+      let increment = end / (duration / 16);
+      function update() {
         start += increment;
         if (start >= end) {
-          clearInterval(counter);
-          el.innerText = prefix + Math.floor(end);
+          el.textContent = prefix + end.toLocaleString();
         } else {
-          el.innerText = prefix + Math.floor(start);
+          el.textContent = prefix + Math.floor(start).toLocaleString();
+          requestAnimationFrame(update);
         }
-      }, 10);
-    };
+      }
+      update();
+    }
+    animateCounter('projects', 14);
+    animateCounter('clients', 9);
+    animateCounter('revenue', 3500, '₹');
 
-    window.onload = () => {
-      animateCounter('projects', 47);
-      animateCounter('clients', 28);
-      animateCounter('revenue', 7200000, '₹');
-    };
-
-    // Viral Score Analyzer
     function analyzeViral() {
-      const text = document.getElementById("viralText").value.toLowerCase();
-      const keywords = ["🔥", "now", "limited", "free", "exclusive", "offer", "today", "🚀", "boost", "viral"];
+      const text = document.getElementById('viralInput').value.toLowerCase();
       let score = 0;
-      keywords.forEach(k => text.includes(k) && score++);
-      const percent = Math.min(100, score * 10 + text.length % 30);
-      document.getElementById("viralOutput").innerText = `Viral Potential Score: ${percent}/100`;
+      if (text.includes("free") || text.includes("limited")) score += 30;
+      if (text.includes("🔥") || text.includes("!")) score += 20;
+      if (text.length > 100) score += 10;
+      document.getElementById('viralResult').textContent = score >= 50 ? "🔥 High Viral Potential!" : "⚠️ Needs Stronger Hooks.";
     }
 
-    // Ad Performance Simulator
     function simulateAd() {
-      const budget = parseInt(document.getElementById("budgetInput").value);
-      const platform = document.getElementById("platformInput").value;
-      if (!budget) return (document.getElementById("adOutput").innerText = "Enter valid budget");
-      const reach = budget * (platform === 'Google' ? 60 : 50);
-      const clicks = Math.floor(reach * 0.06);
+      const budget = parseInt(document.getElementById('budgetInput').value);
+      if (isNaN(budget)) return alert("Enter valid budget");
+      const reach = budget * 30;
+      const clicks = Math.floor(reach * 0.08);
       const leads = Math.floor(clicks * 0.25);
-      document.getElementById("adOutput").innerText = `Estimated Reach: ${reach}\nClicks: ${clicks}\nLeads: ${leads}`;
+      document.getElementById('adResult').innerText = `📣 Reach: ${reach} | Clicks: ${clicks} | Leads: ${leads}`;
     }
 
-    // Content Calendar
+    function generateCaption() {
+      const topic = document.getElementById('captionTopic').value;
+      const caption = `Discover ${topic} like never before 🔥 Limited time only! #${topic.replace(/\s/g,'')} #trending #musthave`;
+      document.getElementById('captionOut').innerText = caption;
+    }
+
     function generateCalendar() {
-      const industry = document.getElementById("industryInput").value;
-      const sample = ["Tips", "How-To", "Behind the Scenes", "Customer Love", "Story Time", "FAQ", "Offer Alert"];
-      const output = Array.from({ length: 7 }, (_, i) => `Week ${i + 1}: ${sample[i % sample.length]} in ${industry}`).join("\n");
-      document.getElementById("calendarOutput").innerText = output;
-    }
-
-    // Landing Page Generator
-    function generateLanding() {
-      const cta = document.getElementById("ctaText").value;
-      const product = document.getElementById("productText").value;
-      if (!cta || !product) return document.getElementById("landingOutput").innerText = "Please fill all fields";
-      document.getElementById("landingOutput").innerHTML = `<div style='padding:1rem;background:#111;border-radius:10px;'><h2 style='color:#00ffd5;'>${product}</h2><p style='color:#ccc;'>${cta}</p><button style='margin-top:1rem;padding:0.5rem 1rem;background:#00ffd5;color:#000;border:none;border-radius:5px;'>Get Started</button></div>`;
+      const niche = document.getElementById('calendarTopic').value;
+      const calendarList = document.getElementById('calendarList');
+      calendarList.innerHTML = '';
+      for (let i = 1; i <= 30; i++) {
+        const li = document.createElement('li');
+        li.textContent = `Day ${i}: ${niche} tip, hack or offer post.`;
+        calendarList.appendChild(li);
+      }
     }
   </script></body>
 </html>
