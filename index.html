@@ -1,184 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To My Sisters 💖</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E4G & Sameer - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #fff0f5, #fce4ec);
-      color: #4a148c;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #00ffd5;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffd5;
+    }
+    .section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hero {
       text-align: center;
-      padding: 20px;
+      padding-top: 5rem;
     }
-
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      color: #e91e63;
-      margin-top: 40px;
+    .hero h2 {
+      font-size: 2.2rem;
+      color: #00ffd5;
+      margin-bottom: 1rem;
     }
-
-    .sub {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #6a1b9a;
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
     }
-
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
     .card {
-      background: #ffffffaa;
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .name {
-      font-size: 1.6rem;
-      color: #ab218e;
-      margin-bottom: 5px;
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 255, 213, 0.2);
     }
-
-    .title {
-      font-style: italic;
-      color: #7b1fa2;
-      margin-bottom: 15px;
+    .card h3 {
+      color: #00ffd5;
+      margin-bottom: 0.5rem;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
+    .card p {
+      color: #ddd;
     }
-
-    li {
-      margin: 10px 0;
-      font-size: 1rem;
-      transition: transform 0.3s;
-    }
-
-    li:hover {
-      transform: scale(1.05);
-      color: #d81b60;
-    }
-
     .footer {
-      margin-top: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #4a148c;
+      background: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
     }
-
-    .confetti {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      pointer-events: none;
-      z-index: 999;
+    .counter-section, .tools-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 4rem;
+      text-align: center;
     }
-
-    .btn {
-      background: #ec407a;
-      color: white;
+    .counter, .label {
+      font-size: 1.5rem;
+      color: #00ffd5;
+    }
+    .tool-box {
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .tool-box textarea, .tool-box input, .tool-box select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: #111;
+      color: #00ffd5;
+      border: 1px solid #444;
+      border-radius: 8px;
+      resize: none;
+    }
+    .tool-box button {
+      background: #00ffd5;
+      color: #000;
+      padding: 0.7rem 1.5rem;
+      font-weight: bold;
       border: none;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border-radius: 25px;
+      border-radius: 6px;
       cursor: pointer;
-      margin-top: 20px;
-      transition: background 0.3s;
     }
-
-    .btn:hover {
-      background: #d81b60;
-    }
-
-    .quote {
-      font-size: 1.1rem;
-      color: #6a1b9a;
-      margin: 10px 0;
-    }
-
-    .fade-in {
-      animation: fadeIn 2s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    .output {
+      margin-top: 1rem;
+      color: #ccc;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-
-<canvas class="confetti" id="confetti-canvas"></canvas>
-
-<h1>To My Sisters 💖</h1>
-<p class="sub">Chaishtha & Muskan — you both mean the world to me 🌍✨</p>
-
-<div class="card fade-in">
-  <div class="name">Muskan 😊</div>
-  <div class="title">“The One Who Brings Smiles”</div>
-  <p class="quote">"Your laugh can light up even my worst days."</p>
+  <header>
+    <h1>E4G & Sameer</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>  <section class="section hero" id="about">
+    <h2>Meet E4G & Sameer</h2>
+    <p>Two brothers reshaping the digital world — E4G is a pro at social media, writing and digital marketing. Sameer masters editing, advertising and digital strategies that convert.</p>
+  </section>  <section class="section" id="skills">
+    <div class="card-container">
+      <div class="card">
+        <h3><i class="fas fa-user-edit"></i> Sameer - Digital Specialist</h3>
+        <p>
+          With deep expertise in editing, digital advertising and full-spectrum marketing — Sameer builds brand stories that scale and sell.
+        </p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-share-alt"></i> E4G - Social Media & Writing Pro</h3>
+        <p>
+          A creative force in social media management, content writing and digital marketing. E4G crafts engaging strategies that build presence and conversions.
+        </p>
+      </div>
+    </div><div class="counter-section">
+  <div>
+    <div class="counter" id="projects">0</div>
+    <div class="label">Projects</div>
+  </div>
+  <div>
+    <div class="counter" id="clients">0</div>
+    <div class="label">Clients</div>
+  </div>
+  <div>
+    <div class="counter" id="revenue">₹0</div>
+    <div class="label">Client Revenue</div>
+  </div>
 </div>
 
-<div class="card fade-in">
-  <div class="name">Chaishtha 🌸</div>
-  <div class="title">“The Calm Strength Behind Us”</div>
-  <p class="quote">"You’re the quiet protector I’ll always count on."</p>
+<div class="tool-box">
+  <h3>💡 Viral Score Analyzer</h3>
+  <textarea id="viralText" placeholder="Paste your caption or idea..."></textarea>
+  <button onclick="analyzeViral()">Analyze</button>
+  <div class="output" id="viralOutput"></div>
 </div>
 
-<div class="card fade-in">
-  <h2>🌟 Reasons I'm Grateful 🌟</h2>
-  <ul>
-    <li>You're always there when I need you.</li>
-    <li>You make ordinary days special.</li>
-    <li>Your support gives me strength.</li>
-    <li>You two complete our family.</li>
-    <li>I learn from your kindness every day.</li>
-  </ul>
+<div class="tool-box">
+  <h3>📊 Ad Performance Simulator</h3>
+  <input id="budgetInput" type="number" placeholder="Enter budget ₹" />
+  <select id="platformInput">
+    <option>Instagram</option>
+    <option>Facebook</option>
+    <option>Google</option>
+  </select>
+  <button onclick="simulateAd()">Simulate</button>
+  <div class="output" id="adOutput"></div>
 </div>
 
-<div class="footer fade-in">
-  💌 Forever Proud To Be Your Bhai —  
-  <br><strong>Yours, Raghav ❤️</strong>
-  <br>
-  <button class="btn" onclick="throwConfetti()">Click for surprise! 🎉</button>
+<div class="tool-box">
+  <h3>📅 30-Day Content Calendar (Preview)</h3>
+  <input id="industryInput" placeholder="e.g. Fashion, Tech, Fitness..." />
+  <button onclick="generateCalendar()">Generate Calendar</button>
+  <div class="output" id="calendarOutput"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script>
-  function throwConfetti() {
-    const end = Date.now() + 3 * 1000;
-    const colors = ['#e91e63', '#f06292', '#ce93d8'];
+<div class="tool-box">
+  <h3>🚀 Mini Landing Page Builder</h3>
+  <input id="ctaText" placeholder="Enter Call-to-Action" />
+  <input id="productText" placeholder="Enter Product Name" />
+  <button onclick="generateLanding()">Generate Preview</button>
+  <div class="output" id="landingOutput"></div>
+</div>
 
-    (function frame() {
-      confetti({
-        particleCount: 5,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: colors
-      });
-      confetti({
-        particleCount: 5,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: colors
-      });
+<div class="tool-box">
+  <h3>📈 Client Success Timeline</h3>
+  <div class="output">
+    <ul>
+      <li>📦 Jan: Online store setup complete</li>
+      <li>📣 Feb: Ad campaigns launched</li>
+      <li>💰 Mar: ₹2L revenue achieved</li>
+      <li>📊 Apr: Expanded into new vertical</li>
+    </ul>
+  </div>
+</div>
 
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    })();
-  }
-</script>
+  </section>  <footer class="footer">&copy; 2025 E4G & Sameer. All rights reserved.</footer>  <script>
+    // Counter Logic
+    const animateCounter = (id, end, prefix = '', duration = 2000) => {
+      let start = 0;
+      const increment = end / (duration / 10);
+      const el = document.getElementById(id);
+      const counter = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          clearInterval(counter);
+          el.innerText = prefix + Math.floor(end);
+        } else {
+          el.innerText = prefix + Math.floor(start);
+        }
+      }, 10);
+    };
 
-</body>
+    window.onload = () => {
+      animateCounter('projects', 47);
+      animateCounter('clients', 28);
+      animateCounter('revenue', 7200000, '₹');
+    };
+
+    // Viral Score Analyzer
+    function analyzeViral() {
+      const text = document.getElementById("viralText").value.toLowerCase();
+      const keywords = ["🔥", "now", "limited", "free", "exclusive", "offer", "today", "🚀", "boost", "viral"];
+      let score = 0;
+      keywords.forEach(k => text.includes(k) && score++);
+      const percent = Math.min(100, score * 10 + text.length % 30);
+      document.getElementById("viralOutput").innerText = `Viral Potential Score: ${percent}/100`;
+    }
+
+    // Ad Performance Simulator
+    function simulateAd() {
+      const budget = parseInt(document.getElementById("budgetInput").value);
+      const platform = document.getElementById("platformInput").value;
+      if (!budget) return (document.getElementById("adOutput").innerText = "Enter valid budget");
+      const reach = budget * (platform === 'Google' ? 60 : 50);
+      const clicks = Math.floor(reach * 0.06);
+      const leads = Math.floor(clicks * 0.25);
+      document.getElementById("adOutput").innerText = `Estimated Reach: ${reach}\nClicks: ${clicks}\nLeads: ${leads}`;
+    }
+
+    // Content Calendar
+    function generateCalendar() {
+      const industry = document.getElementById("industryInput").value;
+      const sample = ["Tips", "How-To", "Behind the Scenes", "Customer Love", "Story Time", "FAQ", "Offer Alert"];
+      const output = Array.from({ length: 7 }, (_, i) => `Week ${i + 1}: ${sample[i % sample.length]} in ${industry}`).join("\n");
+      document.getElementById("calendarOutput").innerText = output;
+    }
+
+    // Landing Page Generator
+    function generateLanding() {
+      const cta = document.getElementById("ctaText").value;
+      const product = document.getElementById("productText").value;
+      if (!cta || !product) return document.getElementById("landingOutput").innerText = "Please fill all fields";
+      document.getElementById("landingOutput").innerHTML = `<div style='padding:1rem;background:#111;border-radius:10px;'><h2 style='color:#00ffd5;'>${product}</h2><p style='color:#ccc;'>${cta}</p><button style='margin-top:1rem;padding:0.5rem 1rem;background:#00ffd5;color:#000;border:none;border-radius:5px;'>Get Started</button></div>`;
+    }
+  </script></body>
 </html>
