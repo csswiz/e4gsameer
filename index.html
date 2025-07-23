@@ -2,176 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Be Mine, My Moon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To My Sisters 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #ffb6c1, #ffe4e1);
-      color: #2c2c2c;
-      text-align: center;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
     }
-
-    header {
-      padding: 60px 20px 20px;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #fce4ec);
+      color: #4a148c;
+      text-align: center;
+      padding: 20px;
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
+      font-size: 3rem;
       color: #e91e63;
+      margin-top: 40px;
     }
 
-    .wink {
-      font-size: 2.5rem;
-      animation: wink 1s infinite;
-    }
-
-    @keyframes wink {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(-15deg); }
-    }
-
-    .flirty-line {
+    .sub {
       font-size: 1.2rem;
       margin-top: 10px;
-      color: #c2185b;
+      color: #6a1b9a;
     }
 
-    .typewriter {
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: #7b1fa2;
-      margin: 20px 0;
-      min-height: 30px;
-      white-space: nowrap;
-      border-right: 2px solid #7b1fa2;
-      overflow: hidden;
-      display: inline-block;
-      animation: blink 0.75s step-end infinite;
+    .card {
+      background: #ffffffaa;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
 
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #7b1fa2 }
+    .name {
+      font-size: 1.6rem;
+      color: #ab218e;
+      margin-bottom: 5px;
     }
 
-    .proposal-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .btn {
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .yes-btn {
-      background: #e91e63;
-      color: white;
-    }
-
-    .yes-btn:hover {
-      background: #d81b60;
-      box-shadow: 0 0 10px #f06292;
-    }
-
-    .no-btn {
-      background: #ffeef0;
-      color: #444;
-    }
-
-    .no-btn:hover {
-      background: #fce4ec;
-      box-shadow: 0 0 10px #e0e0e0;
-    }
-
-    .sexy-end {
-      margin-top: 40px;
+    .title {
       font-style: italic;
       color: #7b1fa2;
+      margin-bottom: 15px;
     }
 
-    #confetti-canvas {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 1rem;
+      transition: transform 0.3s;
+    }
+
+    li:hover {
+      transform: scale(1.05);
+      color: #d81b60;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #4a148c;
+    }
+
+    .confetti {
       position: fixed;
       top: 0; left: 0;
       width: 100vw; height: 100vh;
       pointer-events: none;
       z-index: 999;
     }
+
+    .btn {
+      background: #ec407a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #d81b60;
+    }
+
+    .quote {
+      font-size: 1.1rem;
+      color: #6a1b9a;
+      margin: 10px 0;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
 
-<canvas id="confetti-canvas"></canvas>
+<canvas class="confetti" id="confetti-canvas"></canvas>
 
-<header>
-  <h1>Be Mine, My Moon 😘</h1>
-  <div class="wink">😉</div>
-  <p class="flirty-line">Warning: Saying YES may result in unlimited kisses and cuddles. 💋</p>
-  <div class="typewriter" id="typewriter"></div>
-</header>
+<h1>To My Sisters 💖</h1>
+<p class="sub">Chaishtha & Muskan — you both mean the world to me 🌍✨</p>
 
-<section class="section">
-  <h2>Will You Be Mine?</h2>
-  <div class="proposal-buttons">
-    <button class="btn yes-btn" onclick="launchYes()">Come here, baby 😘</button>
-    <button class="btn no-btn" onclick="launchNo()">I'll resist... but I'm weak 🥵</button>
-  </div>
-</section>
+<div class="card fade-in">
+  <div class="name">Muskan 😊</div>
+  <div class="title">“The One Who Brings Smiles”</div>
+  <p class="quote">"Your laugh can light up even my worst days."</p>
+</div>
 
-<p class="sexy-end">You’re not just hot. You’re home. 🔥💖<br>Yours, Raghav 💌</p>
+<div class="card fade-in">
+  <div class="name">Chaishtha 🌸</div>
+  <div class="title">“The Calm Strength Behind Us”</div>
+  <p class="quote">"You’re the quiet protector I’ll always count on."</p>
+</div>
 
-<audio autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
-</audio>
+<div class="card fade-in">
+  <h2>🌟 Reasons I'm Grateful 🌟</h2>
+  <ul>
+    <li>You're always there when I need you.</li>
+    <li>You make ordinary days special.</li>
+    <li>Your support gives me strength.</li>
+    <li>You two complete our family.</li>
+    <li>I learn from your kindness every day.</li>
+  </ul>
+</div>
+
+<div class="footer fade-in">
+  💌 Forever Proud To Be Your Bhai —  
+  <br><strong>Yours, Raghav ❤️</strong>
+  <br>
+  <button class="btn" onclick="throwConfetti()">Click for surprise! 🎉</button>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 <script>
-  // ✅ Typewriter effect showing "Bhumika" full
-  const text = "This is just for you, Bhumika.";
-  let i = 0;
-  const speed = 70;
-  const el = document.getElementById("typewriter");
-
-  function typeWriter() {
-    if (i < text.length) {
-      el.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-  window.onload = typeWriter;
-
-  // 🎉 YES Button
-  function launchYes() {
-    const duration = 4 * 1000;
-    const end = Date.now() + duration;
+  function throwConfetti() {
+    const end = Date.now() + 3 * 1000;
+    const colors = ['#e91e63', '#f06292', '#ce93d8'];
 
     (function frame() {
-      confetti({ particleCount: 6, angle: 60, spread: 60, origin: { x: 0 } });
-      confetti({ particleCount: 6, angle: 120, spread: 60, origin: { x: 1 } });
-      if (Date.now() < end) requestAnimationFrame(frame);
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: colors
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: colors
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
     })();
-
-    setTimeout(() => {
-      alert("🔥 You’re officially my addiction now 😈");
-      window.location.href = "https://wa.me/?text=I%20said%20YES%2C%20Raghav.%20Now%20come%20kiss%20me.%20💋";
-    }, 3000);
-  }
-
-  // 💔 NO Button
-  function launchNo() {
-    alert("👀 Hmm... you're making this harder than it already is 😩");
-    window.open("https://media.giphy.com/media/3ohs7KViF3PFezue3u/giphy.gif", "_blank");
   }
 </script>
 
